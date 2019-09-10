@@ -1,0 +1,35 @@
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-2">
+      <div class="list-group">
+        <a
+          [routerLink]="['greet']"
+          href="#"
+          class="list-group-item"
+          >
+          Greet
+        </a>
+
+        <a
+        [routerLink]="['/greet']"
+        href="#"
+        class="list-group-item"
+        >
+        Check
+      </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-10">
+      <router-outlet></router-outlet>
+      <!--<button class="btn btn-primary" (click)="onReload()">Reload Page</button>-->
+      <!--<app-edit-server></app-edit-server>-->
+      <!--<hr>-->
+      <!--&lt;!&ndash;<app-server></app-server>&ndash;&gt;-->
+    </div>
+  </div>
+  
+  

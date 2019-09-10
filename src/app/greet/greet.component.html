@@ -1,0 +1,21 @@
+<div class="form-group">
+    <label for="name">Enter id</label>
+    <input type="text" name="userId" class="form-control" [(ngModel)]= "id" (keydown)="resetText()">
+</div>
+
+<div class="form-group">
+        <label for="name">Enter Name</label>
+        <input type="text" ame="userName" class="form-control" [(ngModel)]= "name" (keydown)="resetText()">
+    </div>
+    
+
+<p *ngIf="show">Welcome {{name}}, your id is {{id}}</p>
+
+
+<button
+class="btn btn-primary"
+(click)="greetUser()">Greet User</button>
+
+<button
+class="btn btn-primary"
+(click)="reset()">Reset</button>
