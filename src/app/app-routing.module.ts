@@ -3,18 +3,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { UtilitiesComponent } from './utilities/utilities.component';
 import { GreetComponent } from './greet/greet.component';
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 
 
 const routes: Routes = [
-  {
-    path: 'utilities', component: UtilitiesComponent,
+
+  { path: '', component: HomeComponentComponent },
+
+  {path: 'utilities', component: UtilitiesComponent,
     children:
       [
         { path: 'greet', component: GreetComponent },
         { path: 'greet/:id/:name', component: GreetComponent }
       ]
-  }]
+  },
+  {path: '**', component: PageNotFoundComponent}
+]
 
 
 
@@ -25,4 +31,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [UtilitiesComponent, GreetComponent];
+export const routingComponents = [HomeComponentComponent,UtilitiesComponent, GreetComponent,PageNotFoundComponent];
